@@ -7,7 +7,7 @@ import ToDoContainer from '../components/ToDoContainer'
 const Home: NextPage = () => {
   return (
     <div style={{
-      background: 'linear-gradient(#e66465, #9198e5)',
+      background: 'linear-gradient(#e16465, #2198e5)',
       height: '100vh',
       display: 'flex',
       justifyContent: 'center',
