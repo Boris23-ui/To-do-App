@@ -1,9 +1,10 @@
 import { Checkbox } from '@mui/material'
 import React from 'react'
 import Image from 'next/image';
+import { ToDo } from '../types'; // Adjust the path as necessary
 
 interface Props {
-    todo:string
+    todo:ToDo;
 }
 
  const ToDoItem = ({todo}: Props) => {
@@ -19,7 +20,7 @@ interface Props {
     >
         <div style={{display:'flex', alignItems:'center'}}>
         <Checkbox  />
-          {todo}
+          {todo.description}
         </div>
 
        <button style={{border: 'none', background: 'none'}}>

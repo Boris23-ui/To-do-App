@@ -1,18 +1,23 @@
 import { create } from "zustand";
-import { ToDO } from "../types";
+import { ToDO as ToDo } from "../types";
 
 import { v4 as uuidv4 } from "uuid";
 
 
-interface Store {
-    todos: ToDO[];
+interface ToDoState {
+    todos: ToDo[];
     addTodo: (description: string) => void;
+
 }
 
-const useStore = create<ToDOState>((set) => ({
-    toDos: [],
-    addToDO: (description: string) =>
+export const useStore = create<ToDoState>((set) => ({
+    todos: [],
+    addTodo: (description: string) =>
          set((state) => ({
-            toDos: [...state.toDos, { id: uuidv4(),
-                 description, checked: false }], })
-}))
+            todos: [...state.todos, {
+                 id: uuidv4(),
+                 description,
+                 checked: false }],
+        
+            })),
+        }))
