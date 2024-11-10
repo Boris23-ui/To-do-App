@@ -64,6 +64,7 @@ const ToDoContainer = () => {
             id="outlined-basic"
             label="Outlined" 
             variant="outlined"
+            placeholder="Add New"
           />
 
 
